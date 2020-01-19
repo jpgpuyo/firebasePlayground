@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         btnSetUserProperty.setOnClickListener {
             val value = txtUserProperty.text.toString()
             firebaseAnalytics.logEvent(LOGIN, bundleOf(USERNAME to value))
-            firebaseAnalytics.setUserProperty(USERNAME, txtUserProperty.text.toString())
+            firebaseAnalytics.setUserProperty(USERNAME, value)
         }
 
         btnCleanUserProperty.setOnClickListener {
